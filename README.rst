@@ -1,7 +1,10 @@
 `dirty_cat`
 ===========
 
-**Dirty-cat has been renamed to `skrub <https://github.com/skrub-data/skrub/>`_; dirty-cat will no longer be maintained**
+.. warning::
+
+    *dirty_cat* has migrated to `skrub <https://github.com/skrub-data/skrub/>`_.
+    This repository will no longer be maintained.
 
 .. image:: https://dirty-cat.github.io/stable/_static/dirty_cat.svg
    :align: center
