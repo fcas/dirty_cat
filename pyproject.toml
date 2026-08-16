@@ -1,20 +1,28 @@
-[project]
-name = "dirty-cat"
-version = "0.1.0"
-description = ""
-authors = [
-    {name = "fcas",email = "f3l1nux@gmail.com"}
-]
-requires-python = ">=3.11,<3.13"
-dependencies = [
-    "sphinx-gallery (>=0.21.0,<0.22.0)",
-    "sphinxext-opengraph (>=0.13.0,<0.14.0)",
-    "matplotlib (>=3.11.1,<4.0.0)",
-    "seaborn (>=0.13.2,<0.14.0)",
-    "statsmodels (>=0.14.6,<0.15.0)"
-]
-
-
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+# Minimum requirements for the build system to execute.
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target_version = ['py38', 'py39', 'py310']
+preview = true
+# Exclude irrelevant directories for formatting
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.vscode
+  | \.pytest_cache
+  | \.idea
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
